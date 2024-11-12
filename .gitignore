@@ -1,0 +1,83 @@
+# Xcode
+.DS_Store
+*.swp
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+
+# Derived data
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Xcode environment settings
+xcdebugger/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# macOS metadata
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Byword files
+Icon?
+
+# Temporary files created by Xcode
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Swift Playgrounds
+timeline.xctimeline
+playground.xcplayground
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Bundler
+.bundle/
+
+# SPM Packages
+Packages/
+
+# Xcode server
+sourceControlSettings.json
+
+# Asset Thumbnails
+*.xcassets/Thumbnails
+
+# Other files
+*.moved-aside
+*.xcuserdatad
+*.sample
+
+# SwiftPM
+.build/
+.swiftpm
+
+# IDE Workspace Logs
+xcuserdata
