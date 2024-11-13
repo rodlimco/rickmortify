@@ -36,7 +36,7 @@ extension URLBuilder {
         var stringLiteral: String {
             switch self {
             case .character:
-                return "/api/v2/character"
+                return "/api/character"
             case .detail(let entity, let id):
                 return "/api/\(entity.rawValue)/\(id.toString)"
             case .episode:
