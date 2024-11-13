@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		5BEF443A2CE4FB6500EAA8B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BBAF95F2CE390E70010895A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BBAF9662CE390E70010895A;
+			remoteInfo = RickMortify;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5BBAF9672CE390E70010895A /* RickMortify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMortify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BEF44362CE4FB6500EAA8B9 /* RickMortifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickMortifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = RickMortify;
 			sourceTree = "<group>";
 		};
+		5BEF44372CE4FB6500EAA8B9 /* RickMortifyTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RickMortifyTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5BBAF9642CE390E70010895A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BEF44332CE4FB6500EAA8B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				5BBAF9692CE390E70010895A /* RickMortify */,
+				5BEF44372CE4FB6500EAA8B9 /* RickMortifyTests */,
 				5BBAF9682CE390E70010895A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				5BBAF9672CE390E70010895A /* RickMortify.app */,
+				5BEF44362CE4FB6500EAA8B9 /* RickMortifyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 5BBAF9672CE390E70010895A /* RickMortify.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5BEF44352CE4FB6500EAA8B9 /* RickMortifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BEF443E2CE4FB6500EAA8B9 /* Build configuration list for PBXNativeTarget "RickMortifyTests" */;
+			buildPhases = (
+				5BEF44322CE4FB6500EAA8B9 /* Sources */,
+				5BEF44332CE4FB6500EAA8B9 /* Frameworks */,
+				5BEF44342CE4FB6500EAA8B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BEF443B2CE4FB6500EAA8B9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5BEF44372CE4FB6500EAA8B9 /* RickMortifyTests */,
+			);
+			name = RickMortifyTests;
+			packageProductDependencies = (
+			);
+			productName = RickMortifyTests;
+			productReference = 5BEF44362CE4FB6500EAA8B9 /* RickMortifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					5BBAF9662CE390E70010895A = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					5BEF44352CE4FB6500EAA8B9 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 5BBAF9662CE390E70010895A;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				5BBAF9662CE390E70010895A /* RickMortify */,
+				5BEF44352CE4FB6500EAA8B9 /* RickMortifyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5BBAF9652CE390E70010895A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BEF44342CE4FB6500EAA8B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BEF44322CE4FB6500EAA8B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BEF443B2CE4FB6500EAA8B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BBAF9662CE390E70010895A /* RickMortify */;
+			targetProxy = 5BEF443A2CE4FB6500EAA8B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5BBAF9742CE390E80010895A /* Debug */ = {
@@ -323,6 +398,47 @@
 			};
 			name = Release;
 		};
+		5BEF443C2CE4FB6500EAA8B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A5KS2DHER;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodlimco.RickMortifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickMortify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RickMortify";
+			};
+			name = Debug;
+		};
+		5BEF443D2CE4FB6500EAA8B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A5KS2DHER;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodlimco.RickMortifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickMortify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RickMortify";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -340,6 +456,15 @@
 			buildConfigurations = (
 				5BBAF9772CE390E80010895A /* Debug */,
 				5BBAF9782CE390E80010895A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BEF443E2CE4FB6500EAA8B9 /* Build configuration list for PBXNativeTarget "RickMortifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BEF443C2CE4FB6500EAA8B9 /* Debug */,
+				5BEF443D2CE4FB6500EAA8B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
