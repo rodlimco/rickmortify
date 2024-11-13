@@ -19,6 +19,7 @@ enum CharactersMapper {
             name: character.name,
             image: character.image,
             location: character.location.name,
+            status: character.status,
             url: character.url
         )
     }
