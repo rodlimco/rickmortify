@@ -1,0 +1,85 @@
+{
+  "info": {
+    "count": 826,
+    "pages": 42,
+    "next": "https://rickandmortyapi.com/api/character?page=2",
+    "prev": null
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "origin": {
+        "name": "Earth (C-137)"
+      },
+      "location": {
+        "name": "Citadel of Ricks"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "url": "https://rickandmortyapi.com/api/character/1"
+    },
+    {
+      "id": 2,
+      "name": "Morty Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "origin": {
+        "name": "unknown"
+      },
+      "location": {
+        "name": "Citadel of Ricks"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+      "url": "https://rickandmortyapi.com/api/character/2"
+    },
+    {
+      "id": 3,
+      "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+      "origin": {
+        "name": "Earth (Replacement Dimension)"
+      },
+      "location": {
+        "name": "Earth (Replacement Dimension)"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+      "url": "https://rickandmortyapi.com/api/character/3"
+    },
+    {
+      "id": 4,
+      "name": "Beth Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+      "origin": {
+        "name": "Earth (Replacement Dimension)"
+      },
+      "location": {
+        "name": "Earth (Replacement Dimension)"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
+      "url": "https://rickandmortyapi.com/api/character/4"
+    },
+    {
+      "id": 5,
+      "name": "Jerry Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "origin": {
+        "name": "Earth (Replacement Dimension)"
+      },
+      "location": {
+        "name": "Earth (Replacement Dimension)"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
+      "url": "https://rickandmortyapi.com/api/character/5"
+    }
+  ]
+}
