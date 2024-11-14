@@ -63,11 +63,8 @@ struct CharactersListView: View {
     private var successView: some View {
         List {
             ForEach(viewModel.characters) { character in
-                NavigationLink {
-                    CharacterDetailView(character: character)
-                } label: {
-                    CharacterListItemView(character: character)
-                }
+                CharacterListItemView(character: character)
+                    .listRowInsets(.init(top: 0, leading: 10, bottom: 10, trailing: 10))
             }
 
             ProgressView()
@@ -78,6 +75,7 @@ struct CharactersListView: View {
                 }
         }
         .listStyle(.plain)
+        .background(Color.backgroundColor)
         .refreshable {
             await viewModel.reload()
         }

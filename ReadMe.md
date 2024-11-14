@@ -33,7 +33,7 @@ The app is built with an **MVVM** architecture, written in **Swift**, and utiliz
   
 - **Code Quality**:
   - **SOLID** principles have been followed throughout the implementation.
-  - The project currently has **81% test coverage**, with tests implemented across the **data** and **domain** layers, all **mappers** and for **CharactersListViewModel**.
+  - The project currently has **74% test coverage**, with tests implemented across the **data** and **domain** layers, all **mappers** and for **viewModels**.
 
 ## Installation
 1. Clone the repository.

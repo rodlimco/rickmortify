@@ -33,7 +33,13 @@ struct TabBarView: View {
         case .characters:
             CharactersListView()
         default:
-            Text(tab.title)
+            VStack {
+                Spacer()
+                Text(tab.title)
+                Spacer()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.backgroundColor)
         }
     }
 }
