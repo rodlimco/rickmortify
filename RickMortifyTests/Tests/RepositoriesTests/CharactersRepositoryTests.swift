@@ -23,7 +23,7 @@ final class CharactersRepositoryTests: XCTestCase {
         charactersRepository = nil
     }
 
-    func test_GetCharacters_Success() async throws {
+    func test_GetCharactersForPage_Success() async throws {
         let apiResponse: APIResponse<APICharacter> = .dummy(
             info: .dummy(),
             results: [.dummy()]
@@ -36,7 +36,7 @@ final class CharactersRepositoryTests: XCTestCase {
         XCTAssertEqual(characters.count, 1)
     }
     
-    func test_GetCharacters_ThrowsError() async throws {
+    func test_GetCharactersForPage_ThrowsError() async throws {
         characterstService.getCharactersClosure = { _ in throw NetworkError.invalidRequest }
 
         let throwingExpectation = expectation(description: "throwingExpectation")
@@ -50,7 +50,32 @@ final class CharactersRepositoryTests: XCTestCase {
 
         await fulfillment(of: [throwingExpectation], timeout: 0.1)
     }
-    
+
+    func test_GetCharactersById_Success() async throws {
+        let apiResponse: [APICharacter] = [.dummy()]
+
+        characterstService.getCharactersWithIdsClosure = { _ in apiResponse }
+
+        let characters: [Character] = try await charactersRepository.getCharacters(ids: [])
+        XCTAssertFalse(characters.isEmpty)
+        XCTAssertEqual(characters.count, 1)
+    }
+
+    func test_GetCharactersById_ThrowsError() async throws {
+        characterstService.getCharactersWithIdsClosure = { _ in throw NetworkError.invalidRequest }
+
+        let throwingExpectation = expectation(description: "throwingExpectation")
+
+        do {
+            let characters: [Character] = try await charactersRepository.getCharacters(ids: [])
+            XCTFail("Unexpected value: \(characters)")
+        } catch {
+            throwingExpectation.fulfill()
+        }
+
+        await fulfillment(of: [throwingExpectation], timeout: 0.1)
+    }
+
     func test_GetCharacterDetail_Success() async throws {
         let apiResponse: APICharacter = .dummy()
 

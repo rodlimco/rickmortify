@@ -9,6 +9,7 @@ import Foundation
 
 protocol CharactersRepositoryProtocol {
     func getCharacters(page: Int) async throws -> [Character]
+    func getCharacters(ids: [Int]) async throws -> [Character]
     func getCharacterDetail(id: Int) async throws -> Character
 }
 
@@ -26,6 +27,11 @@ class CharactersRepository: CharactersRepositoryProtocol {
             apiResponse: response,
             transform: CharactersMapper.map(character:)
         ).results
+    }
+    
+    func getCharacters(ids: [Int]) async throws -> [Character] {
+        let response: [APICharacter] = try await service.getCharacters(ids: ids)
+        return CharactersMapper.map(characters: response)
     }
 
     func getCharacterDetail(id: Int) async throws -> Character {

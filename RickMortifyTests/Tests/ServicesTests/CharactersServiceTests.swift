@@ -23,7 +23,7 @@ final class CharactersServiceTests: XCTestCase {
         charactersService = nil
     }
 
-    func test_GetCharacters_Success() async throws {
+    func test_GetCharactersForPage_Success() async throws {
         let mockData: Data = try TestsBundle.test.loadData(for: StubsType.charactersResponse.filename)
 
         MockURLProtocol.requestHandler = { _ in
@@ -35,11 +35,35 @@ final class CharactersServiceTests: XCTestCase {
         XCTAssertTrue(apiResponse.results.count == 5)
     }
     
-    func test_GetCharacters_ThrowsError() async throws {
+    func test_GetCharactersForPage_ThrowsError() async throws {
         let expectation = urlResponseExpectation(data: nil)
 
         do {
             let apiResponse: APIResponse<APICharacter> = try await charactersService.getCharacters(page: 1)
+            XCTFail("Unexpected value: \(apiResponse)")
+        } catch {
+
+        }
+
+        await fulfillment(of: [expectation], timeout: 0.1)
+    }
+    
+    func test_GetCharactersById_Success() async throws {
+        let mockData: Data = try TestsBundle.test.loadData(for: StubsType.characters.filename)
+
+        MockURLProtocol.requestHandler = { _ in
+            (HTTPURLResponse(), mockData)
+        }
+
+        let apiResponse: [APICharacter] = try await charactersService.getCharacters(ids: [])
+        XCTAssertFalse(apiResponse.isEmpty)
+    }
+    
+    func test_GetCharactersById_ThrowsError() async throws {
+        let expectation = urlResponseExpectation(data: nil)
+
+        do {
+            let apiResponse: [APICharacter] = try await charactersService.getCharacters(ids: [])
             XCTFail("Unexpected value: \(apiResponse)")
         } catch {
 

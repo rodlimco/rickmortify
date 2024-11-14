@@ -14,6 +14,11 @@ final class CharactersServiceMock: CharactersServiceable {
     func getCharacters(page: Int?) async throws -> APIResponse<APICharacter> {
         try await getCharactersClosure(page)
     }
+    
+    var getCharactersWithIdsClosure: (([Int]) async throws -> [APICharacter])!
+    func getCharacters(ids: [Int]) async throws -> [APICharacter] {
+        try await getCharactersWithIdsClosure(ids)
+    }
 
     var getCharacterDetailClosure: ((Int) async throws -> APICharacter)!
     func getCharacterDetail(id: Int) async throws -> APICharacter {

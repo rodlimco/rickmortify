@@ -32,6 +32,7 @@ extension URLBuilder {
         case detail(entity: EntityType, id: Int)
         case episode
         case location
+        case multiple(entity: EntityType, ids: [Int])
 
         var stringLiteral: String {
             switch self {
@@ -43,6 +44,9 @@ extension URLBuilder {
                 return "/api/episode"
             case .location:
                 return "/api/location"
+            case .multiple(let entity, let ids):
+                let idsString = ids.map { $0.toString }.joined(separator: ",")
+                return "/api/\(entity.rawValue)/\(idsString)"
             }
         }
     }

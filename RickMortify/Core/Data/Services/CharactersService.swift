@@ -9,6 +9,7 @@ import Foundation
 
 protocol CharactersServiceable {
     func getCharacters(page: Int?) async throws -> APIResponse<APICharacter>
+    func getCharacters(ids: [Int]) async throws -> [APICharacter]
     func getCharacterDetail(id: Int) async throws -> APICharacter
 }
 
@@ -27,6 +28,11 @@ class CharactersService: CharactersServiceable {
         }
 
         let url: URL = try URLBuilder.create(path: .character, queryItems: queryItems)
+        return try await urlSession.request(url: url)
+    }
+    
+    func getCharacters(ids: [Int]) async throws -> [APICharacter] {
+        let url = try URLBuilder.create(path: .multiple(entity: .character, ids: ids))
         return try await urlSession.request(url: url)
     }
 
