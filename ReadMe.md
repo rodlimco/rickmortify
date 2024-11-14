@@ -37,6 +37,6 @@ The app is built with an **MVVM** architecture, written in **Swift**, and utiliz
 
 ## Installation
 1. Clone the repository.
-2. Checkout to master branch
+2. Checkout to master branch.
 3. Open the project in Xcode.
 4. Build and run the app on your preferred simulator or device.
